@@ -1,6 +1,5 @@
-#include"Shared data.cpp"
+#include"Sweet.cpp"
 int main()
 {
-	
-}
 
+}
