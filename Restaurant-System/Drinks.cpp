@@ -7,12 +7,14 @@ public:
     // Adding hot drink
     void Add_Hot_Drink(Drinks Hot_Drink) {
         hot_drinks.push_back(Hot_Drink);
-        position[Hot_Drink.Get_name()] = hot_drinks.size();
+        string name = Hot_Drink.Get_name();
+        position[name] = hot_drinks.size();
     }
     // Adding cold drink
     void Add_Cold_Drink(Drinks Cold_Drink) {
         cold_drinks.push_back(Cold_Drink);
-        position[Cold_Drink.Get_name()] = cold_drinks.size();
+        string name = Cold_Drink.Get_name();
+        position[name] = cold_drinks.size();
     }
     // Update hot drink data
 
