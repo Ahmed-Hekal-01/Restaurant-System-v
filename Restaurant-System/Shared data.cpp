@@ -19,6 +19,7 @@
 #include<assert.h>
 #include<memory.h>
 #include<bitset>
+#include<cctype>
 using namespace std;
 
 class Shared_Data
