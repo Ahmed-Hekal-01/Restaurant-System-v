@@ -20,6 +20,8 @@
 #include<memory.h>
 #include<bitset>
 #include<chrono>
+#include<cctype>
+
 using namespace std;
 
 class Shared_Data
