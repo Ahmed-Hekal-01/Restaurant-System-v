@@ -19,6 +19,7 @@
 #include<assert.h>
 #include<memory.h>
 #include<bitset>
+#include<chrono>
 using namespace std;
 
 class Shared_Data
@@ -28,6 +29,11 @@ private :
 	double price;
 	int quantity;
 public:
+    Shared_Data() {
+        name="";
+        price=0;
+        quantity=0;
+    }
 	void Set_name(string name)
 	{
 		this->name = name;
@@ -35,7 +41,6 @@ public:
 	void Set_price(double price)
 	{
 		this->price = price;
-
 	}
 	void Set_Quantity(int quantity)
 	{
@@ -54,5 +59,4 @@ public:
 	{
 		return quantity;
 	}
-
 };

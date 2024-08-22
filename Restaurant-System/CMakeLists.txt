@@ -14,4 +14,5 @@ add_executable(Restaurant_System
         "Shared data.cpp"
         Sweet.cpp
         all_restaurant.cpp
+        Drinks.cpp
         Drinks.cpp)
