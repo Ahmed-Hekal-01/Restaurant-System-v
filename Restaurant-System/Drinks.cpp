@@ -4,7 +4,6 @@ private:
 	vector<Drinks>hot_drinks, cold_drinks;
 	map<string, int>position;
 public:
-<<<<<<< HEAD
 	void Add_Hot_Drink(Drinks Hot_Drink) {
 		hot_drinks.push_back(Hot_Drink);
 		position[Hot_Drink.Get_name()] = hot_drinks.size();
@@ -75,7 +74,6 @@ public:
 			cout << "Drink Quantity: " << drink.Get_quantity() << endl;
 		}
 	}
-=======
     void Add_Hot_Drink(Drinks Hot_Drink) {
         hot_drinks.push_back(Hot_Drink);
         position[Hot_Drink.Get_name()] = hot_drinks.size();
@@ -146,5 +144,4 @@ public:
             cout<<"Drink Quantity: "<<drink.Get_quantity()<<endl;
         }
     }
->>>>>>> 462cb4db72684b644a83fa6111412d58cef4eabc
 };
