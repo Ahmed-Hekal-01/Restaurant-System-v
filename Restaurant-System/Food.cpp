@@ -1,5 +1,5 @@
 #include "Shared data.cpp"
-class food : public shared_Data {
+class food : public Shared_Data {
 private:
 	vector<food>normal_food, sea_food;
 	vector<food>normal_food_by_price, sea_food_by_price;
@@ -7,7 +7,7 @@ public:
 	void set_normal_food(food food) {
 		normal_food.push_back(food);
 	}
-	void set_sea_food() {
+	void set_sea_food(food food) {
 		sea_food.push_back(food);
 	}
 	void update_normal_name(string name, int index) {
@@ -28,7 +28,7 @@ public:
 	}
 	vector<food>search_normal_by_range_price(double begin, double end) {
 		for (int i = 0; i < normal_food.size(); i++) {
-			if (normal_food.Get_price() >= begin and normal_food.Get_price() <= end) {
+			if (normal_food[i].Get_price() >= begin and normal_food[i].Get_price() <= end) {
 				normal_food_by_price.push_back(normal_food[i]);
 			}
 		}
@@ -36,7 +36,7 @@ public:
 	}
 	vector<food>search_sea_by_range_price(double begin, double end) {
 		for (int i = 0; i < sea_food.size(); i++) {
-			if (sea_food.Get_price() >= begin and sea_food.Get_price() <= end) {
+			if (sea_food[i].Get_price() >= begin and sea_food[i].Get_price() <= end) {
 				sea_food_by_price.push_back(sea_food[i]);
 			}
 		}
@@ -46,17 +46,27 @@ public:
 	{
 		sea_food[index].Set_Quantity(q);
 	}
-	void remove_normal_food(string food) {
-		normal_food.erase(normal_food.begin() + normal_food[food]);
+	void remove_normal_food(int  index) {
+		normal_food.erase(normal_food.begin() + index);
 	}
-	void remove_sea_food(string food) {
-		sea_food.erase(sea_food.begin() + sea_food[food]);
+	void remove_sea_food(int index) {
+		sea_food.erase(sea_food.begin() + index);
 	}
-	void search_normal_food(string food) {
-		return normal_food[food];
+	int search_normal_food(string food) {
+		for (int i = 0; i < normal_food.size(); i++) {
+			if (normal_food[i].Get_name() == food) {
+				return i;
+			}
+		}
+		return -1;
 	}
-	void search_sea_food(string food) {
-		return sea_food[food];
+	int search_sea_food(string food) {
+		for (int i = 0; i < sea_food.size(); i++) {
+			if (sea_food[i].Get_name() == food) {
+				return i;
+			}
+		}
+		return -1;
 	}
 	void display_normal_food() {
 		for (auto i : normal_food) {
