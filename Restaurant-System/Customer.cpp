@@ -81,31 +81,6 @@ public:
         }
     }
     // Drinks
-    // Search by name in hot drinks
-    int Search_Hot_Drinks_Name(string name) {
-        return Search_Cold_Drinks_By_Name(name);
-    }
-    // Search by price in hot drinks
-    vector<Drinks> Search_Hot_Drinks_Price(double start, double end) {
-        return Search_Hot_Drinks_By_Price(start, end);
-    }
-    // Searching
-    // Search by name in hot drinks
-    int Search_Cold_Drinks_Name(string name) {
-        return Search_Cold_Drinks_By_Name(name);
-    }
-    // Search by price in hot drinks
-    vector<Drinks> Search_Cold_Drinks_Price(double start, double end) {
-        return Search_Cold_Drinks_By_Price(start, end);
-    }
-    // Display all hot drinks
-    void Display_Hot_Drinks() {
-        Display_All_Hot_Drinks();
-    }
-    // Display all cold drinks
-    void Display_Cold_Drinks() {
-        Display_All_Cold_Drinks();
-    }
     // Buy this drink
     void Buy_Drink(Drinks drink) {
         string name = drink.Get_name();
@@ -115,20 +90,6 @@ public:
     }
 
     // Sweet
-    // searching sweet by name
-    int search_sweet_name(string s)
-    {
-        return search_sweet_by_name(s);
-    }
-    //searching sweer by price
-    vector<Sweet> search_sweet_range_price(double start, double end)
-    {
-        return search_sweet_by_range_price(start, end);
-    }
-    // displaying all sweet
-    void Display_All_Sweet() {
-        Display_Sweet();
-    }
     // buy this sweet
     void Buy_Sweet(Sweet sweet) {
         string name = sweet.Get_name();
@@ -138,24 +99,6 @@ public:
     }
 
     // Food
-    int search_normal_food_by_name(string name) {
-        return search_normal_food(name);
-    }
-    int search_sea_food_by_name(string name) {
-        return search_sea_food(name);
-    }
-    vector<Food> search_normal_food_by_price(double start, double end) {
-        return search_normal_by_range_price(start, end);
-    }
-    vector<Food> search_sea_food_by_price(double start, double end) {
-        return search_sea_by_range_price(start, end);
-    }
-    void display_all_normal_food() {
-        display_normal_food();
-    }
-    void display_all_sea_food() {
-        display_sea_food();
-    }
     void Buy_Food(Food food) {
         string name = food.Get_name();
         double price = food.Get_price();
