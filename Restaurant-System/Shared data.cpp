@@ -26,8 +26,8 @@ using namespace std;
 
 class Shared_Data
 {
-private :
-	string name; 
+private:
+	string name;
 	double price;
 	int quantity;
 public:
