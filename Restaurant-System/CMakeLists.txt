@@ -5,7 +5,6 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Restaurant_System
         Admin.cpp
-        all_restaurant.cpp
         Bank-account.cpp
         Customer.cpp
         Drinks.cpp
@@ -13,6 +12,5 @@ add_executable(Restaurant_System
         Restaurant-System.cpp
         "Shared data.cpp"
         Sweet.cpp
-        all_restaurant.cpp
         Drinks.cpp
         Drinks.cpp)

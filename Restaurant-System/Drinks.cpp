@@ -56,22 +56,12 @@ public:
         }
         return Ordered_Cold_Drinks;
     }
-<<<<<<< HEAD
 
-    // Remove hot drink
     void Remove_Hot_Drink(int pos) {
         hot_drinks.erase(pos+hot_drinks.begin());
     }
-    // Remove cold drink
     void Remove_Cold_Drink(int pos) {
-        cold_drinks.erase(pos+cold_drinks.begin());
-=======
-    void Remove_Hot_Drink(string drink) {
-        hot_drinks.erase(position[drink]-1+hot_drinks.begin());
-    }
-    void Remove_Cold_Drink(string drink) {
-        cold_drinks.erase(position[drink]-1+cold_drinks.begin());
->>>>>>> 462cb4db72684b644a83fa6111412d58cef4eabc
+        cold_drinks.erase(pos + cold_drinks.begin());
     }
     void Display_All_Hot_Drinks() {
         for(Drinks drink : hot_drinks) {
