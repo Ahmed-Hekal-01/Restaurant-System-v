@@ -12,23 +12,11 @@ public:
 	}
 	int search_sweet_by_name(string s)
 	{
-<<<<<<< HEAD
         return position[s]-1;
 	}
 	vector<Sweet> search_sweet_by_range_price(double start, double end)
 	{
-		vector<Sweet>sweet_by_price;
-=======
-		for (int i = 0; i < sweet.size(); i++)
-		{
-			if (sweet[i].Get_name() == s) return i;
-		}
-		return -1;
-	}
-	vector<Sweet> search_sweet_by_range_price(double start, double end)
-	{
-
->>>>>>> 7872510a9a18bbb82a16c9f9870be9eef947154b
+        vector<Sweet>sweet_by_price;
 		for (int i = 0; i < sweet.size(); i++)
 		{
 			if (sweet[i].Get_price() >= start and sweet[i].Get_price() <= end)
